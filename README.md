@@ -142,6 +142,21 @@ npx codemod react/pure-render-mixin --target <path>
    namespaced name for the mixin. `mixins: [React.addons.PureRenderMixin]` will
    not currently work.
 
+#### `prop-types-typescript`
+
+Converts React PropTypes to TypeScript types.
+
+- Supports function and class components
+- Supports `static propTypes` declarations on class components
+- Supports `forwardRef`s
+- Supports files with multiple components
+- Copies JSDoc comments to the generated TypeScript types
+- Option to remove or preserve PropTypes after converting to TS
+
+```sh
+npx codemod react/prop-types-typescript --target <path>
+```
+
 #### `React-PropTypes-to-prop-types`
 
 Replaces `React.PropTypes` references with `prop-types` and adds the appropriate `import` or `require` statement. This codemod is intended for React 15.5+.
